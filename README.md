@@ -13,7 +13,7 @@ El objetivo es simular un escenario real de gestión de inventarios, común en �
 ## Estructura del proyecto
 Se tienen 3 hojas, las cuales son:
 - Productos (Catalogo de productos tecnologicos) que tiene como columnas: Codigo del producto, Descripcion, Precio unitario y su Stock inicial
-  ![]
+  ![Hoja inicial Productos](imagenes/CapProd1.png)
 - Entradas (Compras) y sus columnas son: Fecha, Codigo del producto y Cantidad
 - Salidas (Ventas) y sus columnas son: Fecha, Codigo del producto y Cantidad
   
