@@ -19,3 +19,7 @@ Se tienen 3 hojas, las cuales son:
 - Salidas (Ventas) y sus columnas son: Fecha, Codigo del producto y Cantidad
   ![Hoja inicial Salidas](imagenes/CapSal1.png)
   
+## Pasos realizados
+### Convertir las tablas
+Primero "converti" las tablas de cada hoja, en "Tablas Oficiales", esto para que al momento de ingresar las formulas, estas se actualicen automaticamente.
+![Hoja editada de Productos](imagenes/CapProd2.png)
