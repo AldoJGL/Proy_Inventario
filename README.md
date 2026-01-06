@@ -1,31 +1,93 @@
 # Proy_Inventario
 
-## Descripcion del proyecto
-Este proyecto consiste en un sistema básico de control de inventarios desarrollado en Excel, utilizando tablas estructuradas y tablas dinámicas para el análisis de entradas, salidas y stock de productos tecnológicos.
+## Descripción del proyecto
+Este proyecto consiste en un sistema básico de control de inventarios desarrollado en Microsoft Excel, utilizando tablas estructuradas, fórmulas y tablas dinámicas para el análisis de entradas, salidas y stock de productos tecnológicos.
 
-El objetivo es simular un escenario real de gestión de inventarios, común en áreas de operaciones, logística, análisis de datos y sistemas.
+El proyecto simula un escenario real de gestión de inventarios, común en áreas de operaciones, logística, análisis de datos y sistemas de información, aplicando buenas prácticas en el manejo y análisis de datos.
 
-## Objetivo del proyecto
-- Registrar un catalogo de productos
-- Controlar entradas (compras) y salidas (ventas)
-- Analizar movimientos de inventario mediante tablas dinamicas
+---
+
+## Objetivos del proyecto
+- Registrar un catálogo de productos tecnológicos  
+- Controlar entradas (compras) y salidas (ventas)  
+- Analizar los movimientos de inventario  
+- Calcular y visualizar el stock actual  
+- Identificar productos con bajo nivel de inventario  
+
+---
 
 ## Estructura del proyecto
-Se tienen 3 hojas, las cuales son:
-- Productos (Catalogo de productos tecnologicos) que tiene como columnas: Codigo del producto, Descripcion, Precio unitario y su Stock inicial
-  ![Hoja inicial Productos](imagenes/CapProd1.png)
-- Entradas (Compras) y sus columnas son: Fecha, Codigo del producto y Cantidad
-  ![Hoja inicial Entradas](imagenes/CapEntr1.png)
-- Salidas (Ventas) y sus columnas son: Fecha, Codigo del producto y Cantidad
-  ![Hoja inicial Salidas](imagenes/CapSal1.png)
-  
-## Pasos realizados
-### Convertir las tablas
-Primero "converti" las tablas de cada hoja, en "Tablas Oficiales", esto para que al momento de ingresar las formulas, estas se actualicen automaticamente.
-![Hoja editada de Productos](imagenes/CapProd2.png)
+El archivo de Excel está compuesto por tres hojas principales:
 
-### Crear Hoja Maestra "Inventario"
-Ahora lo que siguio fue crear una nueva hoja en la que visualizaremos todos los datos para mostrar cuanto stock tenemos, primero copiaremos el codigo de los productos de la hoja Productos, luego con BUSCARV seleccionamos las columnas de Descripcion y Stock inicial, para que se rellenen los datos automaticamente, luego con SUMAR.SI.CONJUNTO seleccionamos desde la tabla Entradas Cantidad y Codigo producto, ademas A2 para que concuerde con los codigos de los productos, esto lo hacemos con la tabla Entradas y Salidas.
-![Tabla inicial Inventario](imagenes/CapInv1.png)
-Lo que sigue es encontrar el Stock Actual y su Estado, para esto use C2 + D2 - E2 para realizar la suma, y lo aplique para toda la tabla, sumado ya todo lo ultimo fue mostrar el Estado para esto use =SI(F2<=10, "Pedir Stock", "En Stock") lo cual me dice si hay menos de 10 productos se necesita Stock en caso contrario tenemos buena cantidad de productos, al final solo agregue color con formato condicional para visualizar mejor los datos.
-![Tabla completa Inventario](imagenes/CapInv2.png)
+### Productos
+Catálogo maestro de productos tecnológicos.
+
+Columnas:
+- Código del producto  
+- Descripción  
+- Precio unitario  
+- Stock inicial  
+
+![Hoja Productos](imagenes/CapProd1.png)
+
+---
+
+### Entradas
+Registro histórico de compras o ingresos al inventario.
+
+Columnas:
+- Fecha  
+- Código del producto  
+- Cantidad  
+
+![Hoja Entradas](imagenes/CapEntr1.png)
+
+---
+
+### Salidas
+Registro histórico de ventas o egresos del inventario.
+
+Columnas:
+- Fecha  
+- Código del producto  
+- Cantidad  
+
+![Hoja Salidas](imagenes/CapSal1.png)
+
+---
+
+## Proceso de desarrollo
+
+### Conversión a tablas de Excel
+Los rangos de datos de cada hoja fueron convertidos en Tablas oficiales de Excel para permitir la actualización automática de fórmulas, mejorar la organización de los datos y facilitar su análisis.
+
+![Tabla Productos convertida](imagenes/CapProd2.png)
+
+---
+
+### Creación de la hoja maestra "Inventario"
+Se creó una hoja adicional denominada Inventario, en la cual se consolidan los datos provenientes de las demás hojas.
+
+Pasos realizados:
+1. Se copiaron los códigos de producto desde la hoja Productos.
+2. Se utilizó la función BUSCARV para obtener automáticamente la descripción y el stock inicial.
+3. Se empleó la función SUMAR.SI.CONJUNTO para calcular el total de entradas y salidas por producto.
+
+![Inventario inicial](imagenes/CapInv1.png) 
+
+4. Se calculó el stock actual mediante la fórmula: Stock Actual = Stock Inicial + Entradas − Salidas
+5. Se creó una columna Estado utilizando la función: =SI(StockActual<=10,"Pedir Stock","En Stock")
+6. Se aplicó formato condicional para resaltar visualmente los productos con bajo inventario.
+ 
+![Inventario final](imagenes/CapInv2.png)
+
+---
+
+## Herramientas utilizadas
+- Microsoft Excel  
+- Tablas estructuradas  
+- Funciones: BUSCARV, SUMAR.SI.CONJUNTO, SI  
+- Formato condicional
+
+## Autor
+Aldo Gonzalez
